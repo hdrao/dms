@@ -7,7 +7,7 @@ export default async function connectDB () {
    
     if(connection?.Connection?.readyState != 1) {
 
-    connection = await mongoose.connect("mongodb+srv://Admin:admin@raodproject.vmer2.mongodb.net/doctorapointment")
+    connection = await mongoose.connect(process.env.MONGODB_URI)
         console.log("DB Conected");
         
 }
